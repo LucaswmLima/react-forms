@@ -6,16 +6,21 @@ const NavBar = () => {
   const location = useLocation();
 
   return (
-    <nav>
+    <nav className="navbar">
+      <div className="title-container">
+        <h3 className="app-title">React Hook Form vs Vanilla Form</h3>
+        <p className="app-title">Comparison of forms created in a standard way and using Hook Forms</p>
+      </div>
+
       <ul>
         {location.pathname !== '/hook-form' && (
           <li>
-            <Link to="/hook-form">Hook Form</Link>
+            <Link className="navbar-link" to="/hook-form">Change to Hook Form</Link>
           </li>
         )}
         {location.pathname !== '/vanilla-form' && (
           <li>
-            <Link to="/vanilla-form">Vanilla Form</Link>
+            <Link className="navbar-link" to="/vanilla-form">Change to Vanilla Form</Link>
           </li>
         )}
       </ul>

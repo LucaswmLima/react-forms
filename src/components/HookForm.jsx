@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form'
 import validator from 'validator';
+import RenderCounter from '../utils/renderCounter';
 
 const HookForm = () => {
 
@@ -14,7 +15,9 @@ const HookForm = () => {
 
   return (
     <div className="app-container">
-      <div className="app-title">Hook Form</div>
+
+      <h1 className="app-title">Hook Form</h1>
+      <RenderCounter />
       <div className="form-group">
         <label>Name</label>
         <input
@@ -116,7 +119,7 @@ const HookForm = () => {
       </div>
 
       <div className="form-group">
-        <button onClick={() => handleSubmit(onSubmit)()}>Criar conta</button>
+        <button onClick={() => handleSubmit(onSubmit)()}>Create account</button>
       </div>
     </div>
   );
